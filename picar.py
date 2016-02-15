@@ -41,6 +41,10 @@ def move(direction):
         video_dir.move_decrease_y()
     elif direction == 'camhome':
         video_dir.home_x_y()
+	elif direction == 'camrecord':
+        video_dir.home_x_y()
+	elif direction == 'camstoprecord':
+        video_dir.home_x_y()
     elif direction == 'forward':
         motor.forward()
     elif direction == 'backward':
