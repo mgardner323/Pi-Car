@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Pi Drive Mobile Car</title>
+        </style>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script language="javascript" type="text/javascript">
+            function Button_onclick(direction) {
+                $.ajax({ url: '/' + direction });
+            }
+        </script>
+</head>
+
+<body>
+<h1 align="left">	&nbsp;Camera Controls 	&nbsp;		&nbsp;	&nbsp;&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;Car Controls</h1>
+<table align="left" class="style1">
+           <tr>
+                <td colspan="2" style="text-align: center">
+			 </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: center">
+                    <input id="btnUp" type="button" value="Up" onclick="Button_onclick('camup')" />
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center">
+                    <input id="btnLeft" type="button" value="Left" onclick="Button_onclick('camleft')" />
+                </td>
+              <td style="text-align: center">
+                    <img src="http://192.168.0.13:10088/?action=stream"/>
+                </td>
+                <td style="text-align: center">
+                    <input id="btnRight" type="button" value="Right" onclick="Button_onclick('camright')" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: center">
+                    <input id="btnDown" type="button" value="Down" onclick="Button_onclick('camdown')" />
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center">
+                    <input id="record" type="button" value="Record" onclick="Button_onclick('camrecord')" />
+                </td>
+                <td style="text-align: center">
+                    <input id="home" type="button" value="Home" onclick="Button_onclick('camhome')" />
+                </td>
+                <td style="text-align: center">
+                    <input id="stoprecord" type="button" value="Stop Recording" onclick="Button_onclick('camstoprecord')" />
+                </td>
+            </tr>
+        </table>
+
+ <table align="center" class="style1">
+            <tr>
+                <td colspan="2" style="text-align: center">
+                    <input id="forward" type="button" value="Forward" onclick="Button_onclick('forward')" />
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center">
+                    <input id="left" type="button" value="Left" onclick="Button_onclick('left')" />
+                </td>
+                <td style="text-align: center">
+                    <input id="right" type="button" value="Right" onclick="Button_onclick('right')" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center">
+                    <input id="reverse" type="button" value="Reverse" onclick="Button_onclick('reverse')" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center">
+                    <input id="stop" type="button" value="Stop" onclick="Button_onclick('stop')" />
+                </td>
+                <td colspan="2" style="text-align: center">
+                    <input id="home2" type="button" value="Home" onclick="Button_onclick('home')" />
+                </td>
+            </tr>
+        </table>
+</body>
+</html>
