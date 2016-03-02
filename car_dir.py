@@ -42,7 +42,7 @@ def turn_right():
 # ==========================================================================================
 
 def turn(angle):
-	angle = Map(angle, 0, 255, leftPWM, rightPWM)
+	angle = Map(angle, 0, 100, leftPWM, rightPWM)
 	pwm.setPWM(0, 0, angle)
 
 def home():

@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 from flask import Flask, render_template, request, jsonify, url_for, redirect# Import necessary modules
+import subprocess
+import os
 import RPi.GPIO as GPIO
 import video_dir
 import car_dir
@@ -35,12 +37,16 @@ def move(direction):
         video_dir.move_decrease_x()
     elif direction == 'camright':
         video_dir.move_increase_x()
-    elif direction == 'up':
+    elif direction == 'camup':
         video_dir.move_increase_y()
-    elif direction == 'down':
+    elif direction == 'camdown':
         video_dir.move_decrease_y()
     elif direction == 'camhome':
         video_dir.home_x_y()
+    elif direction == 'record':
+        subprocess.call(['motion'], shell=True)
+    elif direction == 'stoprecord':
+        subprocess.call(['./stop.sh'], shell=True)
     elif direction == 'forward':
         motor.forward()
     elif direction == 'reverse':
